@@ -1,14 +1,13 @@
 <div align="center">
 
 # 🎙️ AI Agent 与实时语音工程全景实战手册
-### (AI Agent, OpenClaw, Harness Engineering & Voice Agent Full-Stack Guide)
+### (Coding Agent Harness · AI Agent Architecture · Agentic RAG · Voice Agent Full-Stack Guide)
 
 [![Author](https://img.shields.io/badge/作者-王果ai-0084FF?style=flat-square&logo=zhihu)](https://www.zhihu.com/people/wang-guo-ha-53)
-[![Book](https://img.shields.io/badge/著作-《OpenClaw_深度解析》-orange?style=flat-square)](https://www.zhihu.com/people/wang-guo-ha-53)
-[![Articles](https://img.shields.io/badge/体系化长文-105+_篇-brightgreen?style=flat-square)](https://www.zhihu.com/people/wang-guo-ha-53/posts)
+[![Articles](https://img.shields.io/badge/体系化长文-100+_篇-brightgreen?style=flat-square)](https://www.zhihu.com/people/wang-guo-ha-53/posts)
 [![Stars](https://img.shields.io/github/stars/wangguode/AI-Agent-and-Voice-Engineering?style=flat-square)](https://github.com/wangguode/AI-Agent-and-Voice-Engineering/stargazers)
 
-> **从架构原理到生产级落地**：本仓库为《OpenClaw 深度解析：从架构原理到 Agent 工程实践》作者 **王果（知乎 [@王果ai](https://www.zhihu.com/people/wang-guo-ha-53)）** 的开源知识库与工程实践索引，涵盖 **Voice Agent 实时语音机器人全栈架构**、**OpenClaw 与 Harness/Loop Engineering**、**AI Agent 七层工程架构（29 讲）**、**企业级 RAG 七层模型（10 讲）** 以及 **百万架构师高并发实战（24 讲）**。
+> **从架构原理到生产级落地**：本仓库是 **王果（知乎 [@王果ai](https://www.zhihu.com/people/wang-guo-ha-53)，1.2 万关注）** 的开源知识库与可运行代码实验室，涵盖 **Voice Agent 实时语音机器人全栈架构**、**Codex / Claude Code 式编码智能体与 Harness/Loop Engineering**、**AI Agent 七层工程架构（29 讲）**、**企业级 RAG 七层模型（10 讲）** 以及 **百万架构师高并发实战（24 讲）**。
 
 </div>
 
@@ -40,10 +39,29 @@ flowchart TB
 
 ---
 
+## 🧪 可运行代码实验室 (Runnable Labs)
+
+> 每篇核心文章配一份**零依赖、可直接运行**的脱敏实现（仅需 Python 3.9+ / JDK 11+），读完文章即可跑通原理。
+
+| Lab | 对应知乎文章 | 核心能力 | 运行 |
+| :--- | :--- | :--- | :--- |
+| [01-voice-agent-rtp-bargein](./01-voice-agent-rtp-bargein) | 语音机器人篇(3)(4) | RFC 3550 RTP 解析 · RMS VAD · 全双工状态机 · 60ms 打断 | `python3 01-voice-agent-rtp-bargein/bargein_voice_engine.py` |
+| [02-harness-loop-kernel](./02-harness-loop-kernel) | 特别篇六 Harness & Loop Engineering | 死循环收敛检测 · Token 账单熔断 · 时间旅行快照回滚 | `python3 02-harness-loop-kernel/harness_kernel.py` |
+| [03-seven-layer-agentic-rag](./03-seven-layer-agentic-rag) | RAG 篇(1~10) | BM25 + 稠密向量 RRF 融合 · Self-RAG 自省过滤 | `python3 03-seven-layer-agentic-rag/hybrid_self_rag.py` |
+
+```bash
+git clone https://github.com/wangguode/AI-Agent-and-Voice-Engineering.git
+cd AI-Agent-and-Voice-Engineering
+python3 02-harness-loop-kernel/harness_kernel.py   # 30 秒看懂 Harness 如何拦截 Agent 死循环
+javac -d out 01-voice-agent-rtp-bargein/RtpBargeInController.java   # Java 版 RTP 打断控制器
+```
+
+---
+
 ## 📖 目录导航 (Table of Contents)
 
 1. [模块一：Voice Agent · 语音机器人全栈工程实战（6 篇）](#-模块一voice-agent--语音机器人全栈工程实战)
-2. [模块二：OpenClaw、Harness Engineering 与前沿特别篇（10 篇）](#-模块二openclawharness-engineering-与前沿特别篇)
+2. [模块二：Harness Engineering、编码智能体与前沿特别篇（10 篇）](#-模块二harness-engineering编码智能体与前沿特别篇)
 3. [模块三：工业级 AI Agent 架构体系全集（第 1~29 讲）](#-模块三工业级-ai-agent-架构体系全集第-129-讲)
 4. [模块四：企业级 RAG 七层模型与深度检索（14 篇）](#-模块四企业级-rag-七层模型与深度检索)
 5. [模块五：LLM 底层原理、推理优化与训练对齐（8 篇）](#-模块五llm-底层原理推理优化与训练对齐)
@@ -66,9 +84,9 @@ flowchart TB
 
 ---
 
-## 🔥 模块二：OpenClaw、Harness Engineering 与前沿特别篇
+## 🔥 模块二：Harness Engineering、编码智能体与前沿特别篇
 
-围绕《OpenClaw 深度解析：从架构原理到 Agent 工程实践》核心命题，深入探讨 **Harness Engineering（马具工程）**、**Loop 收敛性**、**企业控制平面** 与 **FDE（前线部署工程师）**：
+围绕 Codex / Claude Code 等编码智能体背后的工程命题，深入探讨 **Harness Engineering（马具工程）**、**Loop 收敛性**、**企业控制平面** 与 **FDE（前线部署工程师）**：
 
 - 🔥 **[Agent(特别篇六)：Harness Engineering 和 Loop Engineering —— 一部 Agent 工程的血泪史（479+ 赞）](https://zhuanlan.zhihu.com/p/2051682264325546663)**
 - 🔥 **[Agent(特别篇七)：Graph Engineering 刷屏了，但先问一个问题：你的 Agent Loop 收敛过吗？](https://zhuanlan.zhihu.com/p/2064476217709949350)**
