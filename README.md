@@ -25,8 +25,8 @@
 
 | 旗舰独立仓库 | 技术栈 | 开箱即用核心能力 |
 | :--- | :--- | :--- |
-| 📞 [**voice-agent-rtp-gateway**](https://github.com/wangguode/voice-agent-rtp-gateway) | **Java 17 (Spring Boot 3)** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音监控大屏 (`WG Voice Gateway Console`) + 60ms 毫秒级 `clearAudio` 打断 + DeepSeek/SenseVoice 接入 |
-| 🧩 [**coding-agent-harness-patterns**](https://github.com/wangguode/coding-agent-harness-patterns) | **Java 17 (Spring Boot 3)** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`WG Harness Studio`) + Agent Loop 单测自修复闭环 + HITL 人工审批拦截 + `/compact` 压缩 + MCP JSON-RPC 2.0 沙箱 |
+| 📞 [**voice-agent-rtp-gateway**](https://github.com/wangguode/voice-agent-rtp-gateway) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音工作台 (`Voice Agent · RTP Gateway`) + 60ms 毫秒级 `clearAudio` 打断 + 语音工具调用与大模型问答（支持 macOS/Windows 桌面端） |
+| 🧩 [**coding-agent-harness-patterns**](https://github.com/wangguode/coding-agent-harness-patterns) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`Harness Agent`) + ReAct 工具链/MCP/Skills 动态配置 + 单测自修复闭环 + HITL 审批拦截 + `/compact` 压缩（支持 macOS/Windows 桌面端） |
 
 ---
 
