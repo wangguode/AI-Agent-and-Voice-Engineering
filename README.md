@@ -13,29 +13,20 @@
 
 ---
 
-## 🧭 核心架构视图 (Architecture Overview)
+## 🧭 核心架构视图与旗舰实战项目 (Architecture & Flagship Repos)
 
-```mermaid
-flowchart TB
-    subgraph Voice["🎙️ 实时语音交互层 (Voice Agent Stack)"]
-        SIP["FreeSWITCH / SIP / WebRTC 接入"] --> RTP["RTP 实时音频流 & VAD 端点检测"]
-        RTP --> ASR["流式 ASR (低延迟语音转写)"]
-        TTS["流式 TTS & 毫秒级打断 (Barge-in)"] --> RTP
-    end
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/architecture-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./docs/assets/architecture-light.svg">
+    <img alt="AI Agent and Voice Engineering Full-Stack Panorama" src="./docs/assets/architecture-light.svg" width="100%">
+  </picture>
+</p>
 
-    subgraph AgentOS["🤖 Agent OS 与 Harness Engineering 内核"]
-        ASR --> Loop["Agent Loop (ReAct / Plan-and-Execute / ToT / Reflexion)"]
-        Loop --> Skills["工具与能力层 (Function Calling / MCP / Agent Skills)"]
-        Loop --> Memory["长短期记忆宫殿 & Context Engineering"]
-        Loop --> Governance["控制平面：状态机持久化 / 沙箱隔离 / 熔断降级 / 全链路可观测"]
-        Loop --> TTS
-    end
-
-    subgraph RAGStack["📚 企业级 RAG 七层检索引擎"]
-        Memory <--> Hybrid["混合检索 (BM25 + Milvus 稠密向量 + Rerank)"]
-        Memory <--> Graph["GraphRAG (Neo4j 多跳推理) & Self-RAG 闭环"]
-    end
-```
+| 旗舰独立仓库 | 技术栈 | 开箱即用核心能力 |
+| :--- | :--- | :--- |
+| 📞 [**voice-agent-rtp-gateway**](https://github.com/wangguode/voice-agent-rtp-gateway) | **Java 17 (Spring Boot 3)** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音监控大屏 (`WG Voice Gateway Console`) + 60ms 毫秒级 `clearAudio` 打断 + DeepSeek/SenseVoice 接入 |
+| 🧩 [**coding-agent-harness-patterns**](https://github.com/wangguode/coding-agent-harness-patterns) | **Java 17 (Spring Boot 3)** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`WG Harness Studio`) + Agent Loop 单测自修复闭环 + HITL 人工审批拦截 + `/compact` 压缩 + MCP JSON-RPC 2.0 沙箱 |
 
 ---
 
