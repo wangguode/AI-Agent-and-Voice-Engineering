@@ -5,7 +5,7 @@
 
 [![Author](https://img.shields.io/badge/作者-王果ai-0084FF?style=flat-square&logo=zhihu)](https://www.zhihu.com/people/wang-guo-ha-53)
 [![Articles](https://img.shields.io/badge/体系化长文-100+_篇-brightgreen?style=flat-square)](https://www.zhihu.com/people/wang-guo-ha-53/posts)
-[![Stars](https://img.shields.io/github/stars/wangguode/AI-Agent-and-Voice-Engineering?style=flat-square)](https://github.com/wangguode/AI-Agent-and-Voice-Engineering/stargazers)
+[![Stars](https://img.shields.io/github/stars/wangguode/ai-agent-voice?style=flat-square)](https://github.com/wangguode/ai-agent-voice/stargazers)
 
 > **从架构原理到生产级落地**：本仓库是 **王果（知乎 [@王果ai](https://www.zhihu.com/people/wang-guo-ha-53)，1.2 万关注）** 的开源知识库与可运行代码实验室，涵盖 **Voice Agent 实时语音机器人全栈架构**、**Codex / Claude Code 式编码智能体与 Harness/Loop Engineering**、**AI Agent 七层工程架构（29 讲）**、**企业级 RAG 七层模型（10 讲）** 以及 **百万架构师高并发实战（24 讲）**。
 
@@ -26,7 +26,7 @@
 | 旗舰独立仓库 | 技术栈 | 开箱即用核心能力 |
 | :--- | :--- | :--- |
 | 📞 [**voice-agent-rtp-gateway**](https://github.com/wangguode/voice-agent-rtp-gateway) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音工作台 (`Voice Agent · RTP Gateway`) + 60ms 毫秒级 `clearAudio` 打断 + 语音工具调用与大模型问答（支持 macOS/Windows 桌面端） |
-| 🧩 [**coding-agent-harness-patterns**](https://github.com/wangguode/coding-agent-harness-patterns) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`Harness Agent`) + ReAct 工具链/MCP/Skills 动态配置 + 单测自修复闭环 + HITL 审批拦截 + `/compact` 压缩（支持 macOS/Windows 桌面端） |
+| 🧩 [**zhishu-agent**](https://github.com/wangguode/zhishu-agent) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`Harness Agent`) + ReAct 工具链/MCP/Skills 动态配置 + 单测自修复闭环 + HITL 审批拦截 + `/compact` 压缩（支持 macOS/Windows 桌面端） |
 
 ---
 
@@ -41,8 +41,8 @@
 | [03-seven-layer-agentic-rag](./03-seven-layer-agentic-rag) | RAG 篇(1~10) | BM25 + 稠密向量 RRF 融合 · Self-RAG 自省过滤 | `python3 03-seven-layer-agentic-rag/hybrid_self_rag.py` |
 
 ```bash
-git clone https://github.com/wangguode/AI-Agent-and-Voice-Engineering.git
-cd AI-Agent-and-Voice-Engineering
+git clone https://github.com/wangguode/ai-agent-voice.git
+cd ai-agent-voice
 python3 02-harness-loop-kernel/harness_kernel.py   # 30 秒看懂 Harness 如何拦截 Agent 死循环
 javac -d out 01-voice-agent-rtp-bargein/RtpBargeInController.java   # Java 版 RTP 打断控制器
 ```
