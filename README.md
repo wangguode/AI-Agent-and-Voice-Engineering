@@ -23,10 +23,11 @@
   </picture>
 </p>
 
-| 旗舰独立仓库 | 技术栈 | 开箱即用核心能力 |
+| 旗舰独立仓库 / 在线产品 | 技术栈 | 开箱即用核心能力 |
 | :--- | :--- | :--- |
-| 📞 [**voice-agent-rtp-gateway**](https://github.com/wangguode/voice-agent-rtp-gateway) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音工作台 (`Voice Agent · RTP Gateway`) + 60ms 毫秒级 `clearAudio` 打断 + 语音工具调用与大模型问答（支持 macOS/Windows 桌面端） |
-| 🧩 [**zhishu-agent**](https://github.com/wangguode/zhishu-agent) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python 零依赖 CLI** | 编码智能体可视化工作台 (`Harness Agent`) + ReAct 工具链/MCP/Skills 动态配置 + 单测自修复闭环 + HITL 审批拦截 + `/compact` 压缩（支持 macOS/Windows 桌面端） |
+| 🎙️ [**hardcall**](https://github.com/wangguode/hardcall) · [🌐 在线体验](https://hardcall.153557421.workers.dev) | **Swift 6 (macOS/iOS)** + **Next.js 16** + **Web Speech / Audio** | **52ms 毫秒级实时打断** AI 高压语音面试与演说路演模拟器：支持真实语音对话、4 大结构化题库（大厂行为面试/系统设计/薪资谈判/路演演讲）与高管级表达重构报告 |
+| 🧩 [**zhishu-agent**](https://github.com/wangguode/zhishu-agent) | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python 零依赖 CLI** | **知枢智能体 (Zhishu Agent)**：通用 AI Agent 与编码智能体可视化工作台 (`Harness Agent`) + ReAct 工具链/MCP/Skills 动态配置 + 单测自修复闭环 + HITL 审批拦截 + `/compact` 压缩 |
+| 📞 **voice-agent-rtp-gateway** *(商业核心·私有)* | **Java 17 (Spring Boot 3)** + **Next.js/React** + **Python (Pipecat 1.15)** | FreeSWITCH 8kHz RTP/WebSocket 边缘网关 + 实时语音工作台 (`Voice Agent · RTP Gateway`) + 60ms 毫秒级 `clearAudio` 打断 + 语音工具调用与大模型问答 |
 
 ---
 
